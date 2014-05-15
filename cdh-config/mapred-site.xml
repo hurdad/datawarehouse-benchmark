@@ -28,6 +28,7 @@
   <name>jobtracker.thrift.address</name>
   <value>0.0.0.0:9290</value>
 </property>
+
 <property>
   <name>mapred.jobtracker.plugins</name>
   <value>org.apache.hadoop.thriftfs.ThriftJobTrackerPlugin</value>
@@ -38,13 +39,6 @@
  <name>mapred.tasktracker.map.tasks.maximum</name>
  <value>8</value>
 </property>
-
-<!--
-<property>
- <name>mapred.reduce.tasks</name>
- <value>4</value>
-</property>
--->
 
 <property>
  <name>mapred.tasktracker.reduce.tasks.maximum</name> 
