@@ -1,5 +1,5 @@
 DROP TABLE IF EXISTS customer_parquet;
-CREATE EXTERNAL TABLE  customer_parquet
+CREATE TABLE  customer_parquet
 (
     C_CustomerKey int ,
     C_Name String,
@@ -12,7 +12,7 @@ CREATE EXTERNAL TABLE  customer_parquet
 )stored as parquetfile;
 
 DROP TABLE IF EXISTS part_parquet;
-CREATE EXTERNAL TABLE  part_parquet
+CREATE TABLE  part_parquet
 (
     P_PartKey int ,
     P_Name String,
@@ -26,7 +26,7 @@ CREATE EXTERNAL TABLE  part_parquet
 )stored as parquetfile;
 
 DROP TABLE IF EXISTS supplier_parquet;
-CREATE external TABLE supplier_parquet
+CREATE TABLE supplier_parquet
 (
     S_SuppKey int ,
     S_Name String,
@@ -38,7 +38,7 @@ CREATE external TABLE supplier_parquet
 )stored as parquetfile;
 
 DROP TABLE IF EXISTS dim_date_parquet;
-CREATE EXTERNAL TABLE  dim_date_parquet
+CREATE TABLE  dim_date_parquet
 (
     D_DateKey int,
     D_Date String,
@@ -60,7 +60,7 @@ CREATE EXTERNAL TABLE  dim_date_parquet
 )stored as parquetfile;
 
 DROP TABLE IF EXISTS lineorder_parquet;
-CREATE EXTERNAL TABLE lineorder_parquet
+CREATE TABLE lineorder_parquet
 (
     LO_OrderKey BIGINT,
     LO_LineNumber TINYINT,
