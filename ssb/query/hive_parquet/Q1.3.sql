@@ -1,4 +1,5 @@
- --Q1.3
+set hive.execution.engine=mr;
+--Q1.3
 select sum(lo_extendedprice*lo_discount) as
 revenue
 from lineorder_parquet join  dim_date_parquet on lineorder_parquet.lo_orderdatekey = dim_date_parquet.d_datekey

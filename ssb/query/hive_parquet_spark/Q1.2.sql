@@ -1,4 +1,5 @@
-set hive.execution.engine=mr;
+set hive.execution.engine=spark;
+set spark.executor.instances=30;
 --Q1.2
 select sum(lo_extendedprice*lo_discount) as
 revenue

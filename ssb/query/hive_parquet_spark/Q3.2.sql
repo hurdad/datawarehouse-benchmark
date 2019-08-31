@@ -1,4 +1,5 @@
-set hive.execution.engine=mr;
+set hive.execution.engine=spark;
+set spark.executor.instances=30;
 --Q3.2
 select c_city, s_city, d_year, sum(lo_revenue)
 as revenue

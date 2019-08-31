@@ -1,3 +1,4 @@
+set hive.execution.engine=mr;
 --Q3.3
 select c_city, s_city, d_year, sum(lo_revenue)
 as revenue

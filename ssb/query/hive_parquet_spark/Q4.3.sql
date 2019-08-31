@@ -1,4 +1,5 @@
-set hive.execution.engine=mr;
+set hive.execution.engine=spark;
+set spark.executor.instances=30;
 --Q4.3
 select d_year, s_city, p_brand,
 sum(lo_revenue - lo_supplycost) as profit

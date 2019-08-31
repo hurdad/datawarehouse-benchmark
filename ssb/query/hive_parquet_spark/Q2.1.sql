@@ -1,4 +1,5 @@
-set hive.execution.engine=mr;
+set hive.execution.engine=spark;
+set spark.executor.instances=30;
 --Q2.1
 select sum(lo_revenue), d_year, p_brand
 from lineorder_parquet

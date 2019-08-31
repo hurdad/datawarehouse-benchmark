@@ -1,3 +1,4 @@
+set hive.execution.engine=mr;
 --Q1.1
 select sum(lo_extendedprice*lo_discount) as
 revenue

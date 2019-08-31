@@ -1,3 +1,4 @@
+set hive.execution.engine=mr;
 --Q4.1
 select d_year, c_nation,
 sum(lo_revenue - lo_supplycost) as profit

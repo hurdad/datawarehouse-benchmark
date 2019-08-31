@@ -1,3 +1,4 @@
+set hive.execution.engine=mr;
 --Q3.1
 select c_nation, s_nation, d_year,
 sum(lo_revenue) as revenue

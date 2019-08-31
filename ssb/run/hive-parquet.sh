@@ -5,7 +5,7 @@ die () {
 }
 
 #check for args
-[ "$#" -eq 1 ] || die "Missing arguments required: hive.sh <db>"
+[ "$#" -eq 1 ] || die "Missing arguments required: hive-parquet.sh <db>"
 
 #save arg
 DB=$1

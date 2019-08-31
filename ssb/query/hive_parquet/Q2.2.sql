@@ -1,3 +1,4 @@
+set hive.execution.engine=mr;
 --Q2.2
 select sum(lo_revenue), d_year, p_brand
 from lineorder_parquet

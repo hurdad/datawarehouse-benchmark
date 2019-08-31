@@ -1,6 +1,7 @@
-set hive.execution.engine=mr;
---Q4.3
-select d_year, s_city, p_brand,
+set hive.execution.engine=spark;
+set spark.executor.instances=30;
+--Q4.1
+select d_year, c_nation,
 sum(lo_revenue - lo_supplycost) as profit
 from lineorder_parquet
 join dim_date_parquet
@@ -12,9 +13,10 @@ join supplier_parquet
 join part_parquet
   on lineorder_parquet.lo_partkey = part_parquet.p_partkey
 where
-s_nation = 'UNITED STATES'
-and (d_year = 1997 or d_year = 1998)
-and p_category = 'MFGR#14'
-group by d_year, s_city, p_brand
-order by d_year, s_city, p_brand
+c_region = 'AMERICA'
+and s_region = 'AMERICA'
+and (p_mfgr = 'MFGR#1'
+or p_mfgr = 'MFGR#2')
+group by d_year, c_nation
+order by d_year, c_nation
 limit 1000;
